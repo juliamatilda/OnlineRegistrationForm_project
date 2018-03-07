@@ -1,21 +1,21 @@
-
-* {
-	box-sizing: border-box;
+*, *:before, *:after {
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
 }
 
 body {
   font-family: 'Karma', serif;
   width: 100%;
-  text-align: center;
-  margin: 0 auto;
   color: #2d3945;
 }
+
+/*------- header -------*/
 
 .main-header {
   padding-top: 10px;
   margin-bottom: 20px;
   background-color:#2d3945;
-  /* border-bottom: 5px solid #2d3945; */
 }
 
 h1 {
@@ -23,10 +23,14 @@ h1 {
   font-weight: 600;
 }
 
-h2 {
+h2,
+legend {
   font-weight: 600;
-  font-size: 1.8em;
-  margin-bottom: 0;
+  font-size: 1.6em;
+}
+
+h2 {
+margin-bottom: 0;
 }
 
 .header-info {
@@ -41,17 +45,17 @@ h2 {
   font-size: 1.2em;
   font-weight: 300;
   padding-top:10px;
-  color:#aab9c7;
+  opacity: .5;
 }
 
 .border {
   position: relative;
   border-bottom: 5px solid #2d3945;
   margin:20px auto;
-  width: 92%;
+  width: 90%;
 }
 
-  .border::before {
+.border::before {
   content:"";
   position: absolute;
   border-bottom: 2px solid #2d3945;
@@ -59,3 +63,70 @@ h2 {
   left: 0;
   width: 100%;
 }
+
+/*------ main --------*/
+
+
+.main-content {
+  width: 90%;
+}
+
+
+fieldset {
+  border: none;
+	display: flex;
+	flex-direction: column;
+}
+
+
+input[type="text"],
+input[type="email"],
+input[type="tel"],
+input[type="number"],
+textarea,
+select {
+	background-color: #eff0f1;
+	border: 1px solid #eff0f1;
+	border-radius: 5px;
+	width: 100%;
+	height: auto;
+	padding: 15px;
+	color: #adb2b7;
+	outline: 0;
+}
+
+
+input[type="text"] + label,
+input[type="email"] + label,
+input[type="tel"] + label,
+input[type="number"] + label {
+
+}
+
+input::placeholder {
+  color: #adb2b7;
+	font-style: italic;
+	font-size: .8em;
+	font-family: 'Karma', serif;
+	font-weight: 300;
+	text-align: right;
+	padding-right: 5px;
+}
+
+label {
+	opacity: .7;
+}
+
+
+select {
+  height: 50px;
+}
+
+/*--- helpers---  */
+
+.center {
+	text-align: center;
+}
+
+/*center input fields
+fix zip code input style  */

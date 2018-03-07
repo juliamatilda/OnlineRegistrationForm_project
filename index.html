@@ -10,19 +10,20 @@
   </head>
   <body>
     <header class="main-header">
-      <h1>THE CODE REVIEW</h1>
+      <h1 class="center">THE CODE REVIEW</h1>
 
       <div class="header-info">
-        <h2>Signup for our newsletter</h2>
-        <p class="header-text">Get the latest news on how your code is doing right in your inbox</p>
+        <h2 class="center">Signup for our newsletter</h2>
+        <p class="header-text center">Get the latest news on how your code is doing right in your inbox</p>
       </div>
 
     </header>
+
     <div class="border"></div>
 
     <main class="main-content">
       <form action="index.html" method="post">
-        <fieldset>
+        <fieldset class="group1">
           <legend>Contact Information</legend>
 
           <label for="name">Full Name</label>
@@ -41,8 +42,8 @@
           <input type="text" id="city" name="user_city">
 
           <label for="state">State</label>
-          <select id="state" name="user_state">
-            <option value="val1" selected disabled>Choose State</option>
+          <select class="state" id="state" name="user_state">
+            <option class="val1" value="val1" selected>Choose State</option>
             <option value="val2">Alabama</option>
             <option value="val3">Alaska</option>
             <option value="val4">Arizona</option>
@@ -93,6 +94,7 @@
             <option value="val49">West Virginia</option>
             <option value="val50">Wisconsin</option>
             <option value="val51">Wyoming</option>
+
           </select>
 
           <label for="zip">Zip Code</label>
@@ -100,7 +102,7 @@
 
         </fieldset>
 
-        <fieldset>
+        <fieldset class="group2">
           <legend>Newsletter</legend>
 
           <label>Select the newsletters you would like to receive</label>
