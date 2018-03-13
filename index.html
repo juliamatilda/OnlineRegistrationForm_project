@@ -27,10 +27,10 @@
           <legend>Contact Information</legend>
 
           <label for="name">Full Name</label>
-          <input type="text" id="name" name="user_name" placeholder="Required">
+          <input type="text" id="name" name="user_name" placeholder="Required" required>
 
           <label for="email">Email Address</label>
-          <input type="email" id="email" name="user_email" placeholder="Required">
+          <input type="email" id="email" name="user_email" placeholder="Required" required>
 
           <label for="telNo">Phone Number</label>
           <input type="tel" id="telNo" name="user_tel">
@@ -102,10 +102,12 @@
 
         </fieldset>
 
+        <div class="border2"></div>
+
         <fieldset class="group2">
           <legend>Newsletter</legend>
 
-          <label>Select the newsletters you would like to receive</label>
+          <label class="headline">Select the newsletters you would like to receive</label>
           <input type="checkbox" id="htmlNews" name="user_news_type" value="newsletter_html">
           <label for="htmlNews">HTML News</label>
 
@@ -115,23 +117,24 @@
           <input type="checkbox" id="JSNews" name="user_news_type" value="newsletter_js">
           <label for="JSNews">Javascript News</label>
 
-          <label>Newsletter Format</label>
+          <label class="headline">Newsletter Format</label>
           <input type="radio" id="htmlFormat" name="user_news_format" value="format_html">
           <label for="htmlFormat">HTML</label>
 
           <input type="radio" id="textFormat" name="user_news_format" value="format_text">
           <label for="textFormat">Plain text</label>
 
-          <label>Other topics you'd like to hear about</label>
+          <label class="headline">Other topics you'd like to hear about</label>
           <textarea name="user_news_topics" id="newsTopics"></textarea>
           <label for="newsTopics"></label>
         </fieldset>
+
 
         <button type="submit">Sign up</button>
       </form>
     </main>
     <footer>
-      <p class="footer_info">Copyright The Code Review</p>
+      <p class="footer-info">Copyright The Code Review</p>
     </footer>
   </body>
 </html>

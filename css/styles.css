@@ -68,14 +68,28 @@ margin-bottom: 0;
 
 
 .main-content {
-  width: 90%;
+  width: 98%;
+  margin: 40px auto;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
 }
 
 
 fieldset {
   border: none;
-	display: flex;
-	flex-direction: column;
+
+  }
+
+fieldset:nth-of-type(1) {
+  display: flex;
+  flex-direction: column;
+  }
+
+legend {
+  margin-bottom: 20px;
 }
 
 
@@ -88,25 +102,52 @@ select {
 	background-color: #eff0f1;
 	border: 1px solid #eff0f1;
 	border-radius: 5px;
-	width: 100%;
 	height: auto;
-	padding: 15px;
+	padding: 20px;
 	color: #adb2b7;
-	outline: 0;
+  outline: 0;
 }
 
+textarea {
+  resize: none;
+  height: 130px;
+}
+
+select {
+  height: 60px;
+}
+
+input[type="text"],
+input[type="email"],
+input[type="tel"],
+textarea,
+select {
+  width: 100%;
+}
+
+input[type="number"] {
+  width: 50%;
+}
 
 input[type="text"] + label,
 input[type="email"] + label,
 input[type="tel"] + label,
 input[type="number"] + label {
-
+  margin-top: 15px;
 }
+
+
+input[type="number"]::-webkit-inner-spin-button,
+input[type="number"]::-webkit-outer-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
 
 input::placeholder {
   color: #adb2b7;
 	font-style: italic;
-	font-size: .8em;
+	font-size: 1em;
 	font-family: 'Karma', serif;
 	font-weight: 300;
 	text-align: right;
@@ -115,11 +156,67 @@ input::placeholder {
 
 label {
 	opacity: .7;
+  font-size: 1.2em;
 }
 
+.group1 label + input,
+.group1 label + select {
+  margin-top: 8px;
+  margin-bottom: 25px;
+}
 
-select {
-  height: 50px;
+.group2 label + input {
+  margin-top: 20px;
+  }
+
+.group2 > label {
+  display: inline;
+}
+
+.group2 > label:not(:first-of-type) {
+  margin-left: 10px;
+}
+
+.group2 > label::after {
+  content: "";
+  display: block;
+}
+
+.headline::before {
+  content: "";
+  display: block;
+  padding-top: 10px;
+}
+
+.border2 {
+  position: relative;
+  border-top: 2px solid #2d3945;
+  margin:0 auto;
+  padding-bottom: 30px;
+  width: 92%;
+}
+
+button[type="submit"] {
+  width:94%;
+  color: white;
+  background-color: #4ebbb5;
+  padding: 22px 0;
+  margin: auto;
+  border-radius: 5px;
+  font-family: 'Karma', serif;
+  font-size: 1.5em;
+  font-weight:600;
+}
+
+/*--- footer---  */
+
+/* footer {
+  display: flex;
+  flex-direction: column;
+} */
+
+.footer-info {
+ margin: 0 auto 10px auto;
 }
 
 /*--- helpers---  */
@@ -129,4 +226,5 @@ select {
 }
 
 /*center input fields
+style outline - focus state
 fix zip code input style  */
