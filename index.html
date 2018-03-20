@@ -11,17 +11,18 @@
   <body>
     <header class="main-header">
       <h1 class="center">THE CODE REVIEW</h1>
+    </header>
+    <main class="main-content">
 
-      <div class="header-info">
+      <div class="intro-info">
         <h2 class="center">Signup for our newsletter</h2>
-        <p class="header-text center">Get the latest news on how your code is doing right in your inbox</p>
+        <p class="intro-text center">Get the latest news on how your code is doing right in your inbox</p>
       </div>
 
-    </header>
+      <div class="border">
+      <span class="borderline"></span>
+    </div>
 
-    <div class="border"></div>
-
-    <main class="main-content">
       <form action="index.html" method="post">
         <fieldset class="group1">
           <legend>Contact Information</legend>
@@ -42,7 +43,7 @@
           <input type="text" id="city" name="user_city">
 
           <label for="state">State</label>
-          <select class="state" id="state" name="user_state">
+          <select style='font-size: 1.4em; font-weight:300; font-family:'Karma', serif;' class="state" id="state" name="user_state">
             <option class="val1" value="val1" selected>Choose State</option>
             <option value="val2">Alabama</option>
             <option value="val3">Alaska</option>
@@ -127,13 +128,12 @@
           <label class="headline">Other topics you'd like to hear about</label>
           <textarea name="user_news_topics" id="newsTopics"></textarea>
           <label for="newsTopics"></label>
+
+          <button type="submit">Sign up</button>
         </fieldset>
-
-
-        <button type="submit">Sign up</button>
       </form>
     </main>
-    <footer>
+    <footer class="main-footer">
       <p class="footer-info">Copyright The Code Review</p>
     </footer>
   </body>

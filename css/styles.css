@@ -5,17 +5,17 @@
 }
 
 body {
-  font-family: 'Karma', serif;
-  width: 100%;
   color: #2d3945;
+  font-family: 'Karma', serif;
 }
+
 
 /*------- header -------*/
 
 .main-header {
-  padding-top: 10px;
-  margin-bottom: 20px;
+  padding-top: 15px;
   background-color:#2d3945;
+  height: 100px;
 }
 
 h1 {
@@ -23,54 +23,60 @@ h1 {
   font-weight: 600;
 }
 
+/*------ main --------*/
+
+.main-content {
+  width: 98%;
+  margin:0 auto 40px auto;
+
+
+}
+
 h2,
 legend {
   font-weight: 600;
-  font-size: 1.6em;
+  font-size: 1.8em;
 }
 
 h2 {
 margin-bottom: 0;
 }
 
-.header-info {
-  background-color: white;
+.intro-info {
   padding: 20px 0;
-  margin-bottom: 10px;
 }
 
-.header-text {
-  width: 80%;
+.intro-text {
+  width: 90%;
   margin:auto;
-  font-size: 1.2em;
+  font-size: 1.4em;
   font-weight: 300;
   padding-top:10px;
   opacity: .5;
 }
 
 .border {
-  position: relative;
-  border-bottom: 5px solid #2d3945;
-  margin:20px auto;
-  width: 90%;
+  margin: 20px 12px 80px 12px;
 }
 
-.border::before {
+.borderline {
+  display: block;
+  position: relative;
+  margin: 0 auto;
+}
+
+.borderline::before,
+.borderline::after
+ {
   content:"";
   position: absolute;
   border-bottom: 2px solid #2d3945;
-  top:10px;
-  left: 0;
+  border-top: 5px solid #2d3945;
+  top:5px;
+  height: 12px;
   width: 100%;
 }
 
-/*------ main --------*/
-
-
-.main-content {
-  width: 98%;
-  margin: 40px auto;
-}
 
 form {
   display: flex;
@@ -103,18 +109,17 @@ select {
 	border: 1px solid #eff0f1;
 	border-radius: 5px;
 	height: auto;
-	padding: 20px;
+	padding: 25px 20px;
 	color: #adb2b7;
   outline: 0;
+  font-size: 1.4em;
+  font-weight: 300;
 }
 
 textarea {
   resize: none;
   height: 130px;
-}
 
-select {
-  height: 60px;
 }
 
 input[type="text"],
@@ -124,6 +129,11 @@ textarea,
 select {
   width: 100%;
 }
+
+select {
+  height: 70px;
+}
+
 
 input[type="number"] {
   width: 50%;
@@ -143,11 +153,10 @@ input[type="number"]::-webkit-outer-spin-button {
   margin: 0;
 }
 
-
 input::placeholder {
   color: #adb2b7;
 	font-style: italic;
-	font-size: 1em;
+	font-size: 1.1em;
 	font-family: 'Karma', serif;
 	font-weight: 300;
 	text-align: right;
@@ -156,7 +165,8 @@ input::placeholder {
 
 label {
 	opacity: .7;
-  font-size: 1.2em;
+  font-size: 1.4em;
+  margin-bottom: 15px;
 }
 
 .group1 label + input,
@@ -188,6 +198,10 @@ label {
   padding-top: 10px;
 }
 
+.group2 {
+  padding-bottom: 0;
+}
+
 .border2 {
   position: relative;
   border-top: 2px solid #2d3945;
@@ -198,10 +212,11 @@ label {
 
 button[type="submit"] {
   width:94%;
+  height: auto;
   color: white;
   background-color: #4ebbb5;
   padding: 22px 0;
-  margin: auto;
+  margin: 0 auto;
   border-radius: 5px;
   font-family: 'Karma', serif;
   font-size: 1.5em;
@@ -210,14 +225,27 @@ button[type="submit"] {
 
 /*--- footer---  */
 
-/* footer {
+.main-footer {
+  margin: 0 auto;
   display: flex;
   flex-direction: column;
-} */
+  align-items: center;
+
+}
 
 .footer-info {
- margin: 0 auto 10px auto;
+  font-style: italic;
+  font-weight: 600;
+  font-size: 1.2em;
+  opacity: .3;
+  margin-top:0;
+  margin-bottom: 150px;
+  padding-top: 5px;
 }
+
+
+
+
 
 /*--- helpers---  */
 
