@@ -28,8 +28,6 @@ h1 {
 .main-content {
   width: 98%;
   margin:0 auto 40px auto;
-
-
 }
 
 h2,
@@ -77,27 +75,13 @@ margin-bottom: 0;
   width: 100%;
 }
 
-
-form {
-  display: flex;
-  flex-direction: column;
-}
-
-
 fieldset {
   border: none;
-
-  }
-
-fieldset:nth-of-type(1) {
-  display: flex;
-  flex-direction: column;
-  }
+}
 
 legend {
   margin-bottom: 20px;
 }
-
 
 input[type="text"],
 input[type="email"],
@@ -108,18 +92,25 @@ select {
 	background-color: #eff0f1;
 	border: 1px solid #eff0f1;
 	border-radius: 5px;
-	height: auto;
-	padding: 25px 20px;
 	color: #adb2b7;
   outline: 0;
+}
+
+input[type="text"],
+input[type="email"],
+input[type="tel"],
+input[type="number"],
+select {
+  height: auto;
+	padding: 25px 20px;
   font-size: 1.4em;
   font-weight: 300;
 }
 
 textarea {
   resize: none;
-  height: 130px;
-
+  height: 140px;
+  padding: 10px 10px;
 }
 
 input[type="text"],
@@ -135,10 +126,6 @@ select {
 }
 
 
-input[type="number"] {
-  width: 50%;
-}
-
 input[type="text"] + label,
 input[type="email"] + label,
 input[type="tel"] + label,
@@ -150,13 +137,19 @@ input[type="number"] + label {
 input[type="number"]::-webkit-inner-spin-button,
 input[type="number"]::-webkit-outer-spin-button {
   -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance:none;
   margin: 0;
+}
+
+input[type="number"] {
+  width: 50%;
 }
 
 input::placeholder {
   color: #adb2b7;
 	font-style: italic;
-	font-size: 1.1em;
+	font-size: 0.8em;
 	font-family: 'Karma', serif;
 	font-weight: 300;
 	text-align: right;
@@ -169,6 +162,11 @@ label {
   margin-bottom: 15px;
 }
 
+.group1 label::after {
+  content: "";
+  display: block;
+}
+
 .group1 label + input,
 .group1 label + select {
   margin-top: 8px;
@@ -179,12 +177,12 @@ label {
   margin-top: 20px;
   }
 
-.group2 > label {
+/* .group2 > label {
   display: inline;
-}
+} */
 
 .group2 > label:not(:first-of-type) {
-  margin-left: 10px;
+  margin-left: 12px;
 }
 
 .group2 > label::after {
@@ -203,23 +201,22 @@ label {
 }
 
 .border2 {
-  position: relative;
   border-top: 2px solid #2d3945;
-  margin:0 auto;
+  margin:10px 12px;
   padding-bottom: 30px;
-  width: 92%;
+  max-width: 100%;
 }
 
 button[type="submit"] {
-  width:94%;
+  width: 100%;
   height: auto;
   color: white;
   background-color: #4ebbb5;
-  padding: 22px 0;
+  padding: 26px 0 24px 0;
   margin: 0 auto;
   border-radius: 5px;
   font-family: 'Karma', serif;
-  font-size: 1.5em;
+  font-size: 1.8em;
   font-weight:600;
 }
 
@@ -236,16 +233,12 @@ button[type="submit"] {
 .footer-info {
   font-style: italic;
   font-weight: 600;
-  font-size: 1.2em;
+  font-size: 1.3em;
   opacity: .3;
   margin-top:0;
-  margin-bottom: 150px;
+  margin-bottom: 200px;
   padding-top: 5px;
 }
-
-
-
-
 
 /*--- helpers---  */
 
@@ -253,6 +246,64 @@ button[type="submit"] {
 	text-align: center;
 }
 
-/*center input fields
+/*--------- media queries----------------------------------- */
+
+@media (min-width: 768px) {
+
+
+
+
+  .main-content {
+    margin-top: 40px;
+    width: 60%;
+  }
+
+  h2 {
+    font-size: 2.4em;
+  }
+
+
+  .border {
+    margin-top: 40px;
+    margin-bottom: 120px;
+  }
+
+  .input-group {
+    display: inline-flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+  }
+
+  .input-group label {
+    width: 25%;
+
+  }
+
+  .input-group input,
+  .input-group select {
+    width: 65%;
+
+  }
+
+  .input-group input::after {
+    content: "";
+    display: block;
+  }
+
+
+
+
+
+
+
+
+
+
+}
+
+/*
 style outline - focus state
-fix zip code input style  */
+  */
